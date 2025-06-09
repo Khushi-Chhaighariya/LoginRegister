@@ -1,0 +1,48 @@
+<!--<p>login works!</p>
+<form [formGroup]="data" (ngSubmit)="handleSubmit()">
+ <label for="email">User Id
+    </label>
+    <input type="email" id="email" placeholder="please enter your email" formControlName="userId">
+<br><br>
+    <label for="password">Password</label>
+    <input for="password" id="password" placeholder="please enter your password" formControlName="password">
+<br>
+<button  type="submit" >Login</button>
+<br>
+<a routerLink="/register">You have already Login account</a>
+<br>
+<a>hello</a><br>
+</form>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+ 
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="data" (ngSubmit)="handleSubmit()" >
+      <input type="email" placeholder="Email" formControlName="userId" required>
+      <input type="password" placeholder="Password" formControlName="password" required>
+      <a href="/forget" class="forgot-password">Forgot password?</a>
+      
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <p class="signup-text">Don't have an account? <a href="/register">Signup</a></p>
+    <div class="divider">Or</div>
+    <button class="social-btn facebook-btn">
+      <img src="https://img.icons8.com/color/16/000000/facebook-new.png"/>Login with Facebook
+    </button>
+    <button class="social-btn google-btn">
+      <img src="https://img.icons8.com/color/16/000000/google-logo.png"/> Login with Google
+    </button>
+  </div>
+ 
+</body>
+</html>
